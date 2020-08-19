@@ -1,0 +1,47 @@
+<view class='cart' bindtouchstart='touchStart'>
+  <view class='product-cube' wx:for='{{product}}' wx:key='{{index}}'>
+    <!-- 卡片整体左滑删除容器 -->
+    <view data-index='{{index}}' class="touch-item {{item.properties.isTouchMove ? 'touch-move-active':''}}"  bindtouchmove='touchMove'>
+      <!-- 选项 -->
+      <view class='checkmark'>
+        <icon wx:if="{{item.properties.isSelected}}" type="success" size='20'color="#ff3747" bindtap="selectList" data-index="{{index}}" />
+        <icon wx:else type="circle" size='20' bindtap="selectList" data-index="{{index}}"/>
+      </view>
+      <!-- 卡片 -->
+      <!-- 购物车卡片组件 -->
+      <product-cube-s class='content' data='{{item}}' data-index='{{index}}' bindproducttap='showDetailPage' bindtotalpricetap='calcTotalPrice'></product-cube-s>
+      <!-- 删除按钮 -->
+      <view class='remove' data-index='{{index}}' catchtap='delItem'>删除</view>
+    </view>
+  </view>
+  <!-- 底部文字 -->
+  <view class='nomore'>
+    <text>——</text>
+    <text>没有更多了</text>
+    <text>——</text>
+  </view>
+</view>
+<!-- 底部固定结算 -->
+<view class='shopping-part'>
+  <view class='select-all'>
+    <view class="item-allselect">          
+      <icon wx:if="{{selectAllStatus}}" size='20' type="success_circle" color="red" bindtap="selectAll" />    
+      <icon wx:else type="circle" size='20' bindtap="selectAll"/>        
+    </view>
+    <view class='total'>全选</view>
+  </view>
+  <!-- 价格 -->
+  <view class='prices'>
+    <view class='total'>合计:</view>
+    <view class='price' >￥{{toFixed.toFixed(price / 100)}}</view>
+    
+  </view>
+  <!-- 去结算 按钮 -->
+  <view>
+    <view wx:if='{{price}}' class='buy-btn' bindtap='makeOrder'>去结算</view>
+    <view wx:else class='buy-btn.noselect'>去结算</view>
+  </view>
+
+  <!-- 引入ToFIxed方法 -->
+  <wxs module="toFixed" src="../../utils/toFixed.wxs"></wxs>
+</view>

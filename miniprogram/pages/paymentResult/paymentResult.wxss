@@ -1,0 +1,142 @@
+page{
+  background-color: #f5f5f5
+}
+
+.payment-info {
+  padding: 0 0 40px;
+}
+
+.res-area{
+  /* height: 150px; */
+  width: 100%;
+  margin-bottom: 10px;
+}
+.res-area .res-success{
+  padding: 70px 20px;
+  background-color: #ffa837
+}
+.res-area .res-failed{
+  padding: 70px 20px;
+  background-color: #ff3747
+}
+.res-area .pay-status{
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+.res-area .notification{
+  font-size: 16px;
+  color: #f9f9f9;
+  font-weight: 500;
+}
+
+
+
+/* 地址信息中文字的部分 */
+.address-area{
+  display: flex;
+  background: #fff;
+  margin: 10px;
+  min-height: 80px;
+  max-height: 100px;
+  border-radius: 8px;
+}
+.address-text{
+  display: block;
+  flex: 1;
+  padding: 12px 12px 12px 0;
+}
+
+/* 文字信息中icon的部分 */
+.icon{
+  display: flex;
+  width: 44px;
+  justify-content: center;
+  align-items: center;  
+}
+.icon image{
+  width: 18px;
+  height: 20px;
+}
+
+/* 姓名和电话 */
+.name-tel{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+/* 地址区域 */
+.address{
+  max-height: 60px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500px;
+  color: #666;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* white-space: nowrap; */
+}
+
+/* 分割线 */
+.seperator{
+  display: flex;
+  width: 375px;
+  height: 3px;
+}
+
+
+/* 配送方式 */
+.shipping{
+  margin: 10px 0;
+}
+
+.shipping{
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.shipping-box{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  color: #333;
+  font-weight: 500;
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+/* 底部合计与去结算样式 */
+
+.shopping-part {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  background: #fff;
+}
+
+.shopping-part .go-around{
+  flex: 1;
+  text-align: right;
+  padding: 0 16px;
+  font-size: 16px;
+  color: #999;
+  font-weight: 500
+}
+.shopping-part .buy-btn {
+  font-weight: bold;
+  width: 120px;
+  background: #ff3747;
+  color: #fff;
+  font-size: 18px;
+}
+

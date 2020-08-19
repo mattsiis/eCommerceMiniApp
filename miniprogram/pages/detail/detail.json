@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "detail-intro": "/components/detailIntro/detailIntro"
+  }
+}

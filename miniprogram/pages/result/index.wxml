@@ -1,0 +1,152 @@
+<view class='container'>
+
+  <!-- 选择地址 -->
+  <view class='pick-address'>
+    <view class='address-area' >
+      <!-- 判断是否有地址，如果有，则渲染默认地址 -->
+      <view wx:if='{{hasAddress}}' class='address-info' bindtap='chooseAddress'>
+        <view class='icon'>
+          <image src='/images/icons/my/my_icon_address.png' />
+        </view>
+        <!-- 地址渲染 -->
+        <view class='address-text'>
+          <view class='name-tel'>
+            <view class='name'>{{address.userName}}</view>
+            <view class='telNumber'>{{address.telNumber}}</view>
+          </view>
+          <view class='address'>{{address.region.provinceName+address.region.cityName+address.region.cityName+address.detailInfo}}</view>
+        </view>
+        <text class='next' />
+      </view>
+      <!-- 如果没有地址，则添加地址 -->
+      <view wx:else class='address-info.add-address' bindtap='addAddress'>
+        <view class='icon-area'>
+          <view class='icon-plus-container'>
+            <image src='/images/icons/pay/plus.png' style='height:20px; width:20px;' />
+          </view>
+        </view>
+        <text class='addAddress'>添加收货地址</text>
+        <text class='next' />
+      </view>
+    </view> 
+    <!-- 分割线 -->
+    <image src='/images/icons/pay/seperator.png'  class='seperator' />
+  </view>
+
+  <!-- 显示产品卡片 -->
+  <view class='products-area'>
+    <view wx:for='{{order.products}}' wx:key='this'>
+      <product-cube data='{{item}}' />
+    </view>
+  </view>
+
+  <!-- 运费 -->
+  <view class='shipping'>
+    <view class='shipping-box'>
+      <text>运费</text>
+      <text  decode="{{true}}" style='font-weight: 600'>{{shippingFee / 100}}&nbsp;元</text>
+    </view>
+  </view>
+</view>
+
+<!-- 底部固定结算 -->
+<view class='shopping-part'>
+  <!-- 价格 -->
+  <view class='prices'>
+    <view class='total'>合计:</view>
+    <view class='price' >￥{{toFixed.toFixed(order.total_fee / 100)}}</view>
+  </view>
+
+  <!-- 去结算 按钮 -->
+  <view>
+    <view wx:if='{{!hasAddress}}' class='noAddress'>请添加地址</view>
+    <view wx:else class='buy-btn' bindtap='pay'>立即支付</view>
+  </view>
+
+  <!-- 引入ToFIxed方法 -->
+  <wxs module="toFixed" src="../../utils/toFixed.wxs"></wxs>
+</view>
+
+
+
+
+
+
+
+
+
+<!--
+
+<view>
+    <!-- 订单查询 
+    <view class="weui-form-preview">
+
+        <view class="weui-form-preview__hd" style="height:2.5em;">
+            <view class="weui-form-preview__label">标价金额</view>
+            <view class="weui-form-preview__value_in-hd">{{order.fee_type}} {{index.transform(order.total_fee)}}</view>
+        </view>
+
+        <view class="weui-form-preview__hd" style="height:2.5em;">
+            <view class="weui-form-preview__label">现金支付金额</view>
+            <view class="weui-form-preview__value_in-hd">{{index.transform(order.cash_fee)}}</view>
+        </view>
+
+        <view class="weui-form-preview__bd">
+            <view class="weui-form-preview__item">
+                <view class="weui-form-preview__label">商品信息</view>
+                <view class="weui-form-preview__value">{{order.body}}</view>
+            </view>
+
+            <view class="weui-form-preview__item">
+                <view class="weui-form-preview__label">交易类型</view>
+                <view class="weui-form-preview__value">{{order.trade_type}}</view>
+            </view>
+            <view class="weui-form-preview__item">
+                <view class="weui-form-preview__label">交易状态</view>
+                <view class="weui-form-preview__value">{{order.trade_state}}</view>
+            </view>
+            <view class="weui-form-preview__item">
+                <view class="weui-form-preview__label">付款银行</view>
+                <view class="weui-form-preview__value">{{order.bank_type}}</view>
+            </view>
+            <view class="weui-form-preview__item">
+                <view class="weui-form-preview__label">商户订单号</view>
+                <view class="weui-form-preview__value">
+                  {{order.out_trade_no}}
+                </view>
+            </view>
+            <view class="weui-form-preview__item">
+                <view class="weui-form-preview__label">支付完成时间</view>
+                <view class="weui-form-preview__value">
+                  {{order.time_end}}
+                </view>
+            </view>
+            <view class="weui-form-preview__item">
+                <view class="weui-form-preview__label">交易状态描述</view>
+                <view class="weui-form-preview__value">
+                  {{order.trade_state_desc}}
+                </view>
+            </view>
+        </view>
+        <wxs src="./index.wxs" module="index" />
+    </view>
+
+    <view wx:if="{{order.trade_state==='NOTPAY'}}" class="block">
+        <button
+          type="primary"
+          class="button"
+          bindtap="pay"
+        >
+          支付
+        </button>
+        <button
+          type="warn"
+          class="button"
+          bindtap="close"
+        >
+          取消订单
+        </button>
+    </view>
+</view>
+
+-->

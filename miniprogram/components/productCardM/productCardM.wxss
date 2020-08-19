@@ -1,0 +1,32 @@
+.product-card {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    
+}
+.product-card image {
+    width: 100%;
+    height: 100%
+}
+
+.product-card .info{
+  height: 50px;
+  line-height: 26px;
+  padding: 0 5px 5px;
+  display: block;
+}
+.product-card .title{
+  display: block;
+  color: #333;
+  font-size: 15px;
+  text-overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 500;
+}
+.product-card .price{
+  color: #ff3747;
+  font-size: 17px;
+  font-weight: 500;
+}

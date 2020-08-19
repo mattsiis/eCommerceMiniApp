@@ -1,0 +1,38 @@
+/* 产品部分 */
+.product-title{
+  background-color: #f9f9f9;
+  /* 总容器的宽高 */
+  height: 36px;
+  line-height: 30px;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+}
+/* 标题大容器 */
+.title-container{
+  width: 75px;
+  text-align: center;
+  display: inline-block;
+}
+
+/**
+  * 此处修改文字颜色，文字容器宽度，被选后颜色，底部高亮条颜色和宽度
+  */
+/* 文字容器 */
+.text-area{
+  width: 75px;
+}
+.product-title text {
+  color: #666;
+  padding: 0 4px;
+}
+.product-title text.choose{
+  font-weight: 500;
+  color: #ff3747;
+}
+.product-title .border.choose{
+  border-bottom: 2px solid #ff3747;
+  width: 20px;
+  margin: 0 auto;
+}

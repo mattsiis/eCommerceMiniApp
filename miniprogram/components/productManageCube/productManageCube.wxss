@@ -1,0 +1,20 @@
+/* 总容器 */
+.product-manage-cube{
+  background-color: #fff;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.image-container{
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container image{
+  width: 80px;
+  border-radius: 4px;
+}

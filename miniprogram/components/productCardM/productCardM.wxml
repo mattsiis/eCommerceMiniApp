@@ -1,0 +1,9 @@
+<view class ='product-card' bindtap='chooseProduct'>
+  <view class="product-container">
+    <image src='{{data.productImageUrl}}' mode='widthFix'></image>
+  </view>
+  <view class='info'>
+    <text class='title'>{{data.name}}</text>
+    <text class='price'>￥{{data.price / 100}}</text>
+  </view>
+</view>

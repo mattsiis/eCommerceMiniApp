@@ -1,0 +1,17 @@
+<view class='order-container' bindtap='orderDetail'>
+  <view class='order-status'>
+    <text>{{orderStatus}}</text>
+  </view>
+  <view class='product-container' >
+    <product-cube wx:for='{{data.products}}' wx:key='this' data='{{item}}'></product-cube>
+  </view>
+  <view class='order-info'>
+    <text>共{{quantity}}件商品，</text>
+    <text style='color: #666; font-size: 13px;'>（含运费￥{{toFixed.toFixed(shippingFee / 100)}}元）</text>
+    <text>合计￥</text>
+    <text style='font-size: 16px; font-weight: 600'>{{toFixed.toFixed(total / 100)}}</text>
+    <text decode="{{true}}"> &nbsp;元</text>
+  </view>
+    <!-- 引入ToFIxed方法 -->
+  <wxs module="toFixed" src="../../utils/toFixed.wxs"></wxs>
+</view>

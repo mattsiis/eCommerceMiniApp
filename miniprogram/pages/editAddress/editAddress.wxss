@@ -1,0 +1,43 @@
+.input_area{
+  margin: 10px
+}
+
+.section {
+  display: flex;
+  padding: 18px 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ececec
+}
+
+.input{
+  width: 70%;
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+
+/* 保存按钮样式 */
+.savebtn{
+  position: fixed;
+  border-radius: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ff3747;
+}
+.savebtn text{
+  color: white
+}
+
+.savebtn.ispressed{
+  background-color: #999;
+}

@@ -1,0 +1,16 @@
+<view class ='product-cube' bindtap='chooseProduct'>
+  <view class="image-container">
+    <image class="product-image" src='{{data.productImageUrl}}' mode='widthFix'></image>
+  </view>
+  <view class= 'infomation'>
+    <view class='info'>
+      <image src='/images/icons/home/home_icon_hot.png' mode='widthFix' class='flag'></image>
+      <text class='title'>{{data.name}}</text>
+      <text class="intro">{{data.intro}}</text>
+      <view class='price-container'>
+        <text class='price'>￥{{(data.price / 100)}}</text>
+        <image class='next' src='/images/icons/home/home_btn_next.png' mode='widthFix'></image>
+      </view>
+    </view>
+  </view>
+</view>

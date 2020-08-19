@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "product-manage": "/components/productManageCube/productManageCube"
+  }
+}

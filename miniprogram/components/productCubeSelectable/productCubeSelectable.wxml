@@ -1,0 +1,20 @@
+<view class='product-cube'>
+  <!-- 产品容器 -->
+  <view class='product'>
+    <!-- 图片容器 -->
+    <view class='image-container'>
+      <image src='{{data.productImageUrl[0]}}' mode='widthFix' bindtap='chooseProduct'></image>
+    </view>
+    <!-- 信息容器 -->
+    <view class='infomation'>
+      <view class='info'>
+        <text class='title'>{{data.name}}</text>
+        <text class='intro'>{{data.intro}}</text>
+        <view class='prices' >
+          <view class='price' >￥ {{price / 100}}</view>
+          <counter class='counter' data='{{data.properties}}' bindcounttotaltap='countTotalPrice' ></counter>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+{
+  "component": true,
+  "usingComponents": {"product-cube": "/components/productCube/productCube"}
+}

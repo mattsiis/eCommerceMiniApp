@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "address-cube": "/components/addressCube/addressCube"
+  },
+  "navigationBarTitleText": "地址管理"
+}

@@ -1,0 +1,70 @@
+page{
+  background-color: #ececec;
+}
+
+/* 卡片容器 */
+.address-cube{
+  background-color: #fff;
+  padding: 10px 20px 0;
+  margin-bottom: 10px;
+}
+
+/* 信息框 */
+.info{
+  display: inline;
+  font-size: 18px;
+}
+.info .name{
+  font-size: 18px;
+  padding-right: 30px;
+  font-weight: bold;
+}
+.info .phoneNumber{
+  font-size: 17px;
+  font-weight: 500;
+  color: #333;
+}
+.info .address-area{
+  height: 50px;
+  font-size: 15px;
+  color: #999;
+  padding: 2px 0 10px;
+  border-bottom: 1px solid #ececec;
+  overflow: hidden;
+}
+
+/* 控制区域 */
+.controlButton{
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.setDefault{
+  font-size: 15px;
+}
+.btnBox{
+  display: flex;
+}
+.edit{
+  padding-right: 20px;
+}
+.edit, .delete{
+  display: flex;
+  align-items: center;
+}
+.delete text,
+.edit text{
+  font-size: 14px;
+  color: #666;
+}
+.delete image,
+.edit image{
+  padding-right: 10px;
+  width: 14px;
+}
+.address{
+  overflow: hidden;
+  text-overflow: elipsis;
+  white-space: nowrap;
+}

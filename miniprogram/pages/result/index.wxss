@@ -1,0 +1,188 @@
+page{
+  background-color: #f5f5f5
+}
+
+.container{
+    padding: 0 0 60px;
+}
+.pick-address{
+  background-color: #fff;
+  margin: 0 0 10px;
+}
+.address-area{
+  display: block;
+}
+/* 所有地址信息 */
+.address-info{
+  display: flex;
+  position: relative;
+  /* height: 78px; */
+  max-height: 120px;
+}
+
+/* 地址信息中文字的部分 */
+.address-info .address-text{
+  display: block;
+  flex: 1;
+  padding: 12px 0 0;
+}
+
+/* 文字信息中icon的部分 */
+.icon{
+  padding: 24px 20px;
+}
+.icon image{
+  width: 18px;
+  height: 20px;
+}
+
+.icon-area{
+  padding: 24px
+}
+.icon-plus-container{
+  height: 30px;
+  width: 30px;
+  border-radius: 6px;
+  background-color: #ff3737;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addAddress{
+  font-size: 16px;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+/* 姓名和电话 */
+.name-tel{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+/* 地址区域 */
+.address{
+  max-height: 50px;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 500px;
+  color: #666;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* white-space: nowrap; */
+}
+/* 下一个页面icon */
+.next{
+  width: 48px;
+}
+.next::after,
+.next::before{
+  content: '';
+  display: block;
+  position: absolute;
+  border: 8px solid transparent;
+  border-left-color: #aaa;
+  right: 10px;
+  top: 30px;
+}
+.next:after{
+  border-left-color: #fff;
+  right: 12px
+}
+/* 分割线 */
+.seperator{
+  display: flex;
+  width: 375px;
+  height: 3px;
+}
+
+
+/* 配送方式 */
+.shipping{
+  margin: 10px 0;
+}
+
+.shipping{
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.shipping-box{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  color: #333;
+  font-weight: 500;
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+/* 底部合计与去结算样式 */
+
+.shopping-part {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  background: #fff;
+}
+
+.shopping-part .prices {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  font-weight: bold;
+}
+
+.shopping-part .total {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  padding: 0 0 0 20px;
+}
+
+.shopping-part .price {
+  padding: 0 10px;
+  color: #ff3747;
+}
+
+.shopping-part .buy-btn {
+  font-weight: bold;
+  width: 120px;
+  background: #ff3747;
+  color: #fff;
+  font-size: 18px;
+}
+
+.shopping-part .noAddress {
+  font-weight: bold;
+  width: 120px;
+  background: #999;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+
+
+
+/* 
+
+.button{
+    width:373rpx;
+    margin:40rpx;   
+}
+.block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}  */

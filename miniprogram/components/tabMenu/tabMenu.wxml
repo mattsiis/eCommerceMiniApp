@@ -1,0 +1,8 @@
+  <view class='product-title'>
+    <view class='title-container' wx:for="{{data}}" wx:key="this">
+      <view class='text-area'>
+        <text  data-id="{{data[index].name}}" class="{{data[index].cls}}" bindtap='toggleProduct'>{{data[index].name}}</text>
+      </view>
+      <view class='border {{data[index].cls}}' />
+    </view>
+  </view>

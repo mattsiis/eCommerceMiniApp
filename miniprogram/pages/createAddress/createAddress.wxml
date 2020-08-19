@@ -1,0 +1,39 @@
+<!-- 新建联系人 -->
+
+<!-- 新建表单提交数据 -->
+<form bindsubmit="formSubmit" >
+  <view class='input_area'>
+    <!-- 收货人容器 -->
+    <view class="section">
+      <view class="input_title" name='userName'>收货人：</view>
+      <input class='input' name="userName" placeholder="" />
+    </view>
+
+    <!-- 联系电话容器 -->
+    <view class="section">
+      <view class="input_title" name='telNumber'>联系电话：</view>
+      <input class='input' name="telNumber" type="number" placeholder="" />
+    </view>
+
+    <!-- 所在地区选择期 -->
+    <view class="section">
+      <view class="input_title" name='region'>所在地区：</view>
+        <picker class='input' mode="region"  name='region' value="{{region}}" custom-item="{{customItem}}" bindchange="bindRegionChange" >
+          <view class="picker">
+            {{region == "" ? "请选择城市" : region[0] + "，" + region[1] + "，" + region[2]}}
+          </view>
+        </picker>
+    </view>
+
+    <!-- 详细地址容器 -->
+    <view class="section">
+      <view class="input_title" name='detailInfo'>详细地址：</view>
+      <input class='input' name="detailInfo" placeholder="街道、楼牌号等" />
+    </view>
+  </view>
+
+  <!-- 保存按钮 -->
+  <button class='saveBtn' formType="submit">
+    <text>保存</text>
+  </button>
+</form>

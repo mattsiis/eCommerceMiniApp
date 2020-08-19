@@ -1,0 +1,13 @@
+<view class='content'>
+  <view class='product-text'>
+    <text class='product-name'>{{data.name}}</text>
+    <text class='product-intro'>{{data.intro}}</text>
+    <text class='price'>￥{{data.price / 100}}</text>
+  </view>
+  <view class='badges' wx:if='{{data.badge[0]}}'>
+    <view class='badge' wx:for='{{data.badge}}' wx:key='this'>
+      <image src='/images/icons/globe_icon_checked.png' class='checkmark' ></image>
+      <text>{{item}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+/*
+  在页面渲染中调用该方法可以保留数字的两位小数
+  使用方法：
+  1、在页面中引入该方法 <wxs module="toFixed" src="../../utils/toFixed.wxs"></wxs>
+  2、在需要保留小数的地方使用该函数 
+      <view class='price' >￥{{toFixed.toFixed(price / 100)}}</view>
+*/
+
+// 保留两位小数的方法
+var Fix = {
+  toFixed: function (value) {
+    return value.toFixed(2)//此处2为保留两位小数
+  }
+}
+
+// 暴露接口
+module.exports = {
+  toFixed: Fix.toFixed
+}

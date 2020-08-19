@@ -1,0 +1,74 @@
+/* 总容器 */
+.product-cube{
+  background-color: #fff;
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+.product{
+  display: flex;
+}
+.image-container{
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container image{
+  width: 80px;
+}
+
+
+/* 介绍部分 */
+.infomation{
+  padding: 0 0 0 12px;
+  display: block;
+
+}
+/* 信息 */
+
+.info{
+  width: 210px;
+  display: block;
+}
+.info .title {
+  padding: 12px 0px 0px 0;
+  font-size: 14px;
+  line-height: 14px;
+  display: block;
+  height: 14px;
+  font-weight: 600;
+  color: #333;
+  text-overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.info .intro {
+  padding: 4px 0;
+  font-size: 13px;
+  color: #999;
+  line-height: 18px;
+  height: 34px;
+  display: block;
+  overflow: hidden;
+  text-overflow: hidden;
+}
+/* 价格 */
+.prices{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price {
+  color: #ff3747;
+  font-size: 18px;
+  font-weight: 500px;
+}
+/* 计数器 */
+.prices .counter{
+  display: flex;
+  align-self: center;
+  font-size: 18px;
+}

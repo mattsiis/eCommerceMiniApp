@@ -1,0 +1,25 @@
+/* 页面 */
+page{
+  background: #f5f5f5;
+  padding: 0 0 50px
+}
+
+/* 新建地址样式 */
+.createAddress{
+  position: fixed;
+  border-radius: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ff3747;
+}
+.createAddress text{
+  color: white
+}

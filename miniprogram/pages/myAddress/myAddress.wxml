@@ -1,0 +1,16 @@
+<view>
+  <view wx:for="{{address}}" wx:key="{{index}}">
+     <!-- 如果是选择，则绑定选择事件 -->
+    <view wx:if='{{isChoose}}' bindtap='chooseAddress' data-index='{{index}}'>
+      <address-cube data="{{item}}" bindeditaddresstap='updatePage' id='{{index}}'></address-cube>
+    </view>
+    <!-- 否则正常执行 -->
+    <view wx:else>
+      <address-cube data="{{item}}" bindeditaddresstap='updatePage' id='{{index}}'></address-cube>
+    </view>
+  </view>
+
+  <button class='createAddress' bindtap="createNewAddress">
+      <text decode="{{true}}" space="{{true}}">+&nbsp;&nbsp;新建地址</text>
+  </button>
+</view>

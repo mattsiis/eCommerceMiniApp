@@ -1,0 +1,15 @@
+<view class ='product-cube'>
+  <view class="image-container">
+    <image class="product-image" src='{{data.productImageUrl[0]}}' mode='widthFix' bindtap='chooseProduct'></image>
+  </view>
+  <view class= 'infomation'>
+    <view class='info'>
+      <text class='title'>{{data.name}}</text>
+      <text class="intro">{{data.intro}}</text>
+    </view>
+    <view class='prices'>
+        <text class='quantity' wx:if='{{data.properties.quantity}}'>x{{data.properties.quantity}}</text>
+        <text class='price'>￥{{data.price * data.properties.quantity / 100 || data.price / 100}}</text>
+    </view>
+  </view>
+</view>

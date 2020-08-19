@@ -1,0 +1,56 @@
+
+  <!-- banner -->
+  <swiper interval='4000' autoplay indicator-dots='true' style='height: 200px' indicator-color='#dcdcdc' indicator-active-color='#ff3747'>
+    <swiper-item class='swiper' wx:for="{{banner}}" wx:key="this">
+      <image src='{{item.image}}'></image>
+    </swiper-item>
+  </swiper>
+  
+<!-- 搜索框 -->
+<view hidden='true'>
+  <form class='search' >
+    <input placeholder='搜索你想要的商品' placeholder-style='text-align: center; font-size: 14px' bindconfirm='showSearchPage' value='{{serchValue}}' ></input>
+  </form>
+</view>
+
+<!-- 介绍 -->
+<view class='intro-area'>
+  <text class='intro'  decode="{{true}}" >——&nbsp;&nbsp;&nbsp;&nbsp;本商城由八骏企业联合会会员共同创办&nbsp;&nbsp;&nbsp;&nbsp;——</text>
+</view>
+
+<!-- 信品速递 -->
+<view class='new-product-area'>
+  <!-- 礼品形状icon -->
+  <image class='icon-gift' mode='widthFix' src='/images/icons/home/home_icon_gift.png'> </image>
+  <!-- 信品速递文字 -->
+  <view class='new-product-text'>
+    <text class='dash'>——</text>
+    <text class='new-arrival-text' decode="{{true}}">新&nbsp;&nbsp;品&nbsp;&nbsp;速&nbsp;&nbsp;递</text>
+    <text class='dash'>——</text>
+  </view>
+  <!-- 三个新品速递卡片 -->
+  <view class='new-arrival'>
+    <product-cube-h wx:for='{{newArrival}}' wx:key='this' data='{{item}}' data-id='{{item.id}}' bindproducttap='showDetailPage'></product-cube-h>
+  </view>
+</view>
+
+  <!-- 广告 - 横向移动
+  <scroll-view scroll-x>
+    <!-- 广告容器 -->
+    <!-- <view class='ads' style='width: {{adWidth}}px'>
+      <view class='item' wx:for="{{ads}}" wx:key="this">
+        <image src="{{item.image}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </scroll-view> --> 
+
+  <!-- 产品分类标题 -->
+  <view class='product-title'>
+    <text wx:for="{{productTitle}}" wx:key="this" data-id="{{item.id}}" class="{{item.cls}}" bindtap='toggleProduct'>{{item.title}}</text>
+  </view>
+  <!-- 产品卡片 -->
+  <view class='products'>
+    <product-card-m wx:for="{{products}}" wx:key="this" wx:for-index='idx' data='{{item}}' bindproducttap='showDetailPage' class="product {{ idx%2==0 ? 'product-left':'product-right'}}"></product-card-m>
+  </view>
+

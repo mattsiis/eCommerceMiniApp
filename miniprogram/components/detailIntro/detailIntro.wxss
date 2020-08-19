@@ -1,0 +1,63 @@
+/* 整体组件容器 */
+.content{
+  padding: 0 16px;
+}
+
+/* 产品说明文字容器 */
+.product-text{
+  border-bottom: 1px solid #ececec;
+  padding: 10px 20px 8px 0px;
+}
+/* 产品品名样式 */
+.product-text .product-name{
+  display: block;
+  font-size: 17px;
+  color: #333;
+  font-weight: 600;
+  max-height: 32px;
+  text-overflow: hidden;
+  overflow: hidden;
+}
+/* 产品文字介绍样式 */
+.product-text .product-intro{
+  display: block;
+  font-size: 15px;
+  color: #aaa;
+  max-height: 42px;
+  line-height: 20px;
+  text-overflow: hidden;
+  /* white-space: nowrap; */
+  overflow: hidden;
+}
+/* 产品价格样式 */
+.product-text .price{
+  display: block;
+  line-height: 24px;
+  padding: 10px 0 0;
+  font-size: 22px;
+  color: #ff3747;
+  font-weight: 500;
+}
+
+/* 打勾部分 */
+/* 打勾部分容器 */
+.badges{
+  display: flex;
+}
+/* 单个标签容器 */
+.badge{
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+}
+/* 标签图片样式 */
+.badge image{
+  height: 16px;
+  width: 16px;
+}
+/* 标签文字样式 */
+.badge text{
+  font-size: 14px;
+  color: #999;
+  padding: 0 10px 0 5px; 
+}

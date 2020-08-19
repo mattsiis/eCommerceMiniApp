@@ -1,0 +1,39 @@
+<view class='detail'>
+  <!-- banner部分 -->
+  <swiper indicator-dots='true' style='height: 375px; width: 375px' indicator-color='#dcdcdc' indicator-active-color='#aaaaaa'>
+    <swiper-item class='swiper' wx:for="{{product.productImageUrl}}"   wx:key="this">
+      <image style='width: 375px' mode='widthFix' src='{{item}}'></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 商品简介 -->
+  <view class='intro'>
+    <detail-intro data="{{product}}"></detail-intro>
+  </view>
+  <!-- 图片详情 -->
+  <view class='detail-img'>
+    <view class='images' wx:for='{{product.detailImageUrl}}' wx:key='this'>
+      <image src='{{item}}' mode='widthFix'></image>
+    </view>
+  </view>
+</view>
+
+<!-- 底部固定按钮位置 -->
+<view class='btn-area'>
+  <view class='btn-small'>
+    <button open-type='share' class='icon-share'>
+      <image src='/images/icons/detail/icon_share.png'></image>
+      <text>分享</text>
+    </button>
+    <button open-type='contact' class='icon-contact'>
+      <image src='/images/icons/detail/icon_service.png'></image>
+      <text>客服</text>
+    </button>
+    <button class="icon-star{{hasSave ? '.choose' : ''}}" bindtap='saveProduct'>
+      <image src="{{hasSave ? '/images/icons/detail/icon_save_active.png' : '/images/icons/detail/icon_save.png'}}"></image>
+      <text>收藏</text>
+    </button>
+  </view>
+  <button class='add-cart' bindtap='addCart'>加入购物车</button>
+  <button class='buy' bindtap='makeOrder'>立即购买</button>
+</view>

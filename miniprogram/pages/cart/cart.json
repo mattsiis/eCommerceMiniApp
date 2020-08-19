@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "product-cube-s": "/components/productCubeSelectable/productCubeSelectable"
+  },
+
+  "navigationBarTitleText": "购物车"
+
+}

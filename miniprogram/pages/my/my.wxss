@@ -1,0 +1,102 @@
+page{
+  background: #f5f5f5
+}
+
+button{
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+button::after{
+  border: none
+}
+btn-hover{
+  background-color: #fff
+}
+
+
+
+.mine .user{
+  background: #fff;
+  padding: 80px 30px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.mine .user .img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.mine .user .name{
+  display: block;
+  margin-top: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* 列表部分 */
+.mine .list{
+  margin-top: 10px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.mine .list .item{
+  line-height: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.mine .list image{
+  width: 19px;
+  height: 22px;
+  vertical-align: middle;
+  margin: 0 12px 0 16px;
+}
+
+.mine .list text{
+  margin-left: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.mine .list .item:after,
+.mine .list .item:before{
+  content: '';
+  display: block;
+  position: absolute;
+  border: 8px solid transparent;
+  border-left-color: #ccc;
+  right: 10px;
+  top: 18px;
+}
+
+.mine .list .item:after{
+  border-left-color: #fff;
+  right: 12px
+}
+
+/* 为button专门设置样式 */
+.mine .list .item2:after,
+.mine .list .item2:before{
+  content: '';
+  display: block;
+  position: absolute;
+  border: 8px solid transparent;
+  border-left-color: #ccc;
+  right: 10px;
+  top: 15px;
+}
+.mine .list .item2:after{
+  border-left-color: #fff;
+  right: 12px
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tab-menu": "/components/tabMenu/tabMenu",
+    "order-cube": "/components/orderCube/orderCube"
+    }
+}

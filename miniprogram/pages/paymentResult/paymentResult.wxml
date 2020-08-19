@@ -1,0 +1,65 @@
+<view class='payment-info'>
+  <!-- 是否已经完成支付 -->
+  <view class='res-area'>
+    <view class='res-success' wx:if="{{isPaid == 'SUCCESS'}}">
+      <view class='pay-status'>订单已支付</view>
+      <view class='notification'>请等待商家发货</view>
+    </view>
+    <view class='res-failed' wx:else>
+      <view class='pay-status'>订单未支付</view>
+      <view class='notification'>请把我带回家吧</view>
+    </view>
+  </view>
+
+  <!-- 运输地址 -->
+  <view class='address-area'>
+    <view class='icon'>
+      <image src='/images/icons/my/my_icon_address.png' />
+    </view>
+    <!-- 地址渲染 -->
+    <view class='address-text'>
+      <view class='name-tel'>
+        <view class='name'>{{order.address.userName}}</view>
+        <view class='telNumber'>{{order.address.telNumber}}</view>
+      </view>
+      <view class='address'>{{order.address.region.provinceName + order.address.region.cityName + order.address.region.cityName + order.address.detailInfo}}</view>
+    </view>
+  </view>
+
+  <!-- 订单明细 -->
+  <view>
+    <!-- 显示产品卡片 -->
+    <view class='products-area'>
+      <view wx:for='{{order.products}}' wx:key='this'>
+        <product-cube data='{{item}}' />
+      </view>
+    </view>
+
+    <!-- 运费 -->
+    <view class='shipping'>
+      <view class='shipping-box'>
+        <text>运费</text>
+        <text decode="{{true}}" style='font-weight: 600'>{{shippingFee / 100}}&nbsp;元</text>
+      </view>
+    </view>
+    <!-- 总计 -->
+    <view class='shipping'>
+      <view class='shipping-box'>
+        <text>共计</text>
+        <text decode="{{true}}" style='font-weight: 600'>{{order.total_fee / 100}}&nbsp;元</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 支付按钮 -->
+<!-- 底部固定结算 -->
+<view class='shopping-part' wx:if="{{!(isPaid == 'SUCCESS')}}">
+
+  <!-- 去结算 按钮 -->
+  <view class='go-around' bindtap='goHomePage'>再逛逛</view>
+  <view class='buy-btn' bindtap='pay'>立即支付</view>
+
+  <!-- 引入ToFIxed方法 -->
+  <wxs module="toFixed" src="../../utils/toFixed.wxs"></wxs>
+</view>

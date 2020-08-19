@@ -1,0 +1,29 @@
+<view class='mine'>
+  <view class='user'>
+    <open-data class='name' type='userNickName'></open-data>
+    <open-data class='img' type='userAvatarUrl'></open-data>
+  </view>
+  <!-- 按钮模块 -->
+  <view class='list'>
+    <view class='item' wx:for='{{list1}}' wx:key="this" bindtap='{{item.callback}}'>
+      <image src="{{item.img}}"></image>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+  <view class='list'>
+    <view class='item' wx:for='{{list2}}' style='{{item.style}}' wx:key="this" bindtap='{{item.callback}}'>
+      <image src="{{item.img}}"></image>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+  <view class='list'>
+    <button hover-class='btn-hover' open-type='contact' wx:for='{{list3}}' wx:key="this" open-type='contact'>
+      <view class='item2'>
+        <image src="{{item.img}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </button>
+  </view>
+</view>
+<!-- 客服按钮 -->
+<button open-type='contact' class='icon-contact'><text></text></button>

@@ -1,0 +1,52 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/productList/productList",
+    "pages/backendSubmit/backendSubmit",
+    "pages/savedProduct/savedProduct",
+    "pages/myOrder/myOrder",
+    "pages/paymentResult/paymentResult",
+    "pages/queryorder/index",
+    "pages/result/index",
+    "pages/my/my",
+    "pages/editAddress/editAddress",
+    "pages/myAddress/myAddress",
+    "pages/detail/detail",
+    "pages/createAddress/createAddress",
+    "pages/boughtProduct/boughtProduct",
+    "pages/sharePrize/sharePrize"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "八骏商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#ff3747",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-select.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/icons/car.png",
+        "selectedIconPath": "images/icons/car-select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/icons/member.png",
+        "selectedIconPath": "images/icons/member-select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

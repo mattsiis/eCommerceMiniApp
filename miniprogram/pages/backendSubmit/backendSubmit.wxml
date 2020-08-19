@@ -1,0 +1,166 @@
+<!-- 用户登陆 -->
+<view class="userinfo">
+  <block wx:if="{{!hasUserInfo && canIUse}}">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+    <view class="hint">授权后才可正常使用更新功能</view>
+  </block>
+  <block wx:else>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+</view>
+
+
+<!-- 新建表单提交数据 -->
+<form bindsubmit="formSubmitTest">
+  <view class='input_area'>
+    <!-- 产品类别容器 -->
+    <view class="section">
+      <view class="input_title" name='productType'>产品类别：</view>
+      <input class='input' name="productType" placeholder="请选择" />
+    </view>
+
+    <!-- 产品编号容器 -->
+    <view class="section">
+      <view class="input_title" name='id'>产品编号：</view>
+      <input class='input' name="id" placeholder="" />
+    </view>
+
+
+
+    <view class='add' bindtap='addInput'>增加</view>
+    <view class="input_title" name='badge'>标签：</view>
+    <view class='box' wx:for='{{array}}' wx:key=''>
+        <view class='del' bindtap='delInput' data-idx='{{index}}'>删除</view>
+        <input type='text' class='b-ipt' placeholder='请输入' data-idx='{{index}}' value='{{inputVal[index]}}' bindinput='getInputVal' name='badge'/>    
+    </view>
+  
+
+    <!-- 产品品牌 -->
+    <view class="section">
+      <view class="input_title" name='brand'>品牌：</view>
+      <input class='input' name="brand" placeholder="" />
+    </view>
+
+    <!-- 产品介绍 -->
+    <view class="section">
+      <view class="input_title" name='name'>品名：</view>
+      <input class='input' name="name" placeholder="" />
+    </view>
+
+    <!-- 产品介绍 -->
+    <view class="section">
+      <view class="input_title" name='intro'>产品介绍：</view>
+      <input class='input' name="intro" placeholder="" />
+    </view>
+
+    <!-- 产品价格 -->
+    <view class="section">
+      <view class="input_title" name='price'>价格：</view>
+      <input class='input' name="price" type='number' placeholder="" />
+    </view>
+
+    <!-- 产品价格 -->
+    <view class="section">
+      <view class="input_title" name='inventory'>库存：</view>
+      <input class='input' name="inventory" type='number' placeholder="" />
+    </view>
+
+    <!-- 主图上传 -->
+    <view class="section">
+      <view class="input_title" name='uploadProductImages'>上传主图：</view>
+      <view class="photo-add">
+        <view class="weui-cells">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <!-- 使用weui 的上传器 -->
+              <view class="weui-uploader">
+                <!-- 上传说明 -->
+                <view class="weui-uploader__hd">
+                  <view class="weui-uploader__title">点击可预览选好的图片</view>
+                  <view class="weui-uploader__info"></view>
+                </view>
+                <!-- 上传的图片预览 -->
+                <view class="weui-uploader__bd">
+                  <!-- 上传的图片 -->
+                  <view class="weui-uploader__files">
+                    <block wx:for="{{photosNewProfile}}" wx:for-item="image" wx:for-index="idx" wx:key="{{idx}}">
+                      <view class="weui-uploader__file">
+                        <image class="weui-uploader__img" data-src="{{image}}" data-type="photosNewProfile" bindtap="previewImage" src='{{image.src}}'></image>
+                        <image class="cancel" src="/images/cancel.png" bindtap="cancel" data-index="{{idx}}" data-type='photosNewProfile'></image>
+                      </view>
+                    </block>
+                  </view>
+                  <!-- 上传图片的限制，不超过12个 -->
+                  <view class="weui-uploader__input-box" wx:if="{{photosNewProfile.length < 5}}">
+                    <view class="weui-uploader__input" bindtap="chooseImage" data-type='photosNewProfile'></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 详情图上传 -->
+    <view class="section">
+      <view class="input_title" name='uploadDetailImages'>详情图主图：</view>
+      <view class="photo-add">
+      <view class="weui-cells">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <!-- 使用weui 的上传器 -->
+            <view class="weui-uploader">
+              <!-- 上传说明 -->
+              <view class="weui-uploader__hd">
+                <view class="weui-uploader__title">点击可预览选好的图片</view>
+                <view class="weui-uploader__info"></view>
+              </view>
+              <!-- 上传的图片预览 -->
+              <view class="weui-uploader__bd">
+                <!-- 上传的图片 -->
+                <view class="weui-uploader__files">
+                  <block wx:for="{{photosNewDetail}}" wx:for-item="image" wx:for-index="idx" wx:key="{{idx}}">
+                    <view class="weui-uploader__file" >
+                      <image class="weui-uploader__img"  data-type="photosNewDetail" bindtap="previewImage" data-src="{{image}}" src='{{image.src}}'></image>
+                      <image class="cancel" src="/images/cancel.png" bindtap="cancel" data-index="{{idx}}" data-type='photosNewDetail'></image>
+                    </view>
+                  </block>
+                </view>
+                <!-- 上传图片的限制，不超过12个 -->
+                <view class="weui-uploader__input-box" wx:if="{{photosNewDetail.length < 12}}">
+                  <view class="weui-uploader__input" bindtap="chooseImage" data-type='photosNewDetail'></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+      <!-- 所在地区选择期 -->
+      <!-- <view class="section">
+      <view class="input_title" name='region'>所在地区：</view>
+        <picker class='input' mode="region"  name='region' value="{{region}}" custom-item="{{customItem}}" bindchange="bindRegionChange" >
+          <view class="picker">
+            {{region == "" ? "请选择城市" : region[0] + "，" + region[1] + "，" + region[2]}}
+          </view>
+        </picker>
+    </view> -->
+    </view>
+
+    <!-- 保存按钮 -->
+    <button class='saveBtn' formType="submit">
+      <text>保存</text>
+    </button>
+</form>
+
+<button bindtap="updateHomePage">
+  <text>一键发布</text>
+</button>
+
+<button bindtap="goHome">
+  <text>返回主页</text>
+</button>

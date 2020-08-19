@@ -1,0 +1,25 @@
+.counter{
+  display: flex;
+}
+.icon{
+  color: #999;
+  font-size: 18px;
+  line-height: 16px;
+  height: 18px;
+  padding: 0 6px;
+  border: 1px solid #aaa;
+}
+.icon.grey{
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+.number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18px;
+  padding: 0 16px;
+  border: 1px solid #aaa;
+  margin: 0 4px;
+  font-size: 14px;
+}

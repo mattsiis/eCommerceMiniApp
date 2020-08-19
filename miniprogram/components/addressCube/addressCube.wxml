@@ -1,0 +1,27 @@
+<view class ='address-cube'>
+  <view class= 'infomation'>
+    <view class='info'>
+      <text class='name'>{{data.userName}}</text>
+      <text class="phoneNumber">{{data.telNumber}}</text>
+      <view class='address-area'>
+        <text class="city">{{data.region.provinceName + ' ' + data.region.cityName + ' ' + data.region.countyName + ' '}}</text>
+        <text class="address">{{data.detailInfo}}</text>
+      </view>
+    </view>
+    <view class='controlButton'>
+      <view class='setDefault' catchtap='setDefault' data-type='default'>{{data.index == 0? '默认地址' : '设为默认'}}</view>
+      <view class='btnBox'>
+        <!-- 编辑按钮 -->
+        <view class='edit' catchtap='changeAddress' data-type='change'>
+          <image src='/images/icons/address/icon_edit.png' mode='widthFix'></image>
+          <text class="btntext">编辑</text>
+        </view>
+        <!-- 删除按钮 -->
+        <view class='delete' catchtap='deleteAddress' data-type='delete'>
+          <image src='/images/icons/address/icon_delete.png' mode='widthFix'></image>
+          <text class="btntext">删除</text>
+        </view>
+      </view>  
+    </view>
+  </view>
+</view>

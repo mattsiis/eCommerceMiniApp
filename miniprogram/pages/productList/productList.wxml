@@ -1,0 +1,5 @@
+
+<!-- 获取产品列表 -->
+<view wx:for='{{productListData}}' wx:key='this'>
+  <product-manage data="{{item}}"></product-manage>
+</view>

@@ -1,0 +1,32 @@
+.order-container{
+  margin: 0 0 10px;
+  background: #fff;
+}
+/* 订单状态 */
+.order-status{
+  text-align: right;
+  height: 22px;
+  padding: 0 14px;
+}
+.order-status text{
+  font-size: 14px;
+  color: #fc5866;
+  font-weight: 600;
+  line-height: 40px;
+}
+/* 产品容器 */
+.product-container{
+  border-bottom: 1px solid #dfdfdf
+}
+
+.order-info{
+  text-align: right;
+  height: 40px;
+  padding: 0 14px;
+}
+.order-info text{
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  line-height: 40px;
+}

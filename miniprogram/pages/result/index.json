@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "确认订单",
+  "usingComponents": {
+    "product-cube": "/components/productCube/productCube"
+  }
+}
+  

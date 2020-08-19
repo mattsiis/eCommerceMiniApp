@@ -1,0 +1,12 @@
+<!-- 顶部导航 -->
+<view>
+  <!-- 导航组件 -->
+  <tab-menu class='tab' bindchangetabtap='changetap' data='{{title}}' />
+</view>
+
+<!-- 带状态的产品卡片 -->
+<view>
+  <view wx:for='{{order}}' wx:key='this'>
+    <order-cube bindorderdetailtap='queryorder'data='{{item}}'></order-cube>
+  </view>
+</view>

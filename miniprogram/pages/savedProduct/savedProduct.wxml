@@ -1,0 +1,7 @@
+<view class='save-product' >
+  <!-- 没有数据的提示文案 -->
+  <text class='showTip' wx:if='{{showTips}}' decode="{{true}}">—&nbsp;&nbsp;&nbsp;我的收藏空空如也,快去收藏商品吧&nbsp;&nbsp;&nbsp;—</text>
+  <view class='product-area' wx:for='{{data}}' wx:key='this'>
+      <product-cube  data='{{item}}' bindproducttap='chooseItem'></product-cube>
+  </view>
+</view>

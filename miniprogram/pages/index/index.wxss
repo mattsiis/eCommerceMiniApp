@@ -1,0 +1,113 @@
+/* 搜索条 */
+.search {
+  padding: 10px 40rpx;
+  background: #fff;
+  display: block;
+}
+.search input {
+  padding: 0 40rpx;
+  width: 590rpx;
+  background: #efefef;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* banner */
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 广告 */
+/* .ads {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  padding-left: 10px;
+  text-align: center;
+}
+.ads .item{
+  height: 140px;
+  width: 170px;
+  margin-right: 10px;
+}
+.ads .item image{
+  height: 100px;
+  width: 170px;
+}
+.ads .item text{
+  font-size: 14px
+} */
+
+/* 文字说明 */
+.intro-area{
+  display: flex;
+  justify-content: center
+}
+
+.intro-area .intro{
+  padding: 10px 0 50px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #aaaaaa
+}
+
+/* 新品速递 */
+.new-product-area{
+  width: 100%;
+  display: inline-block;
+  text-align: center
+} 
+.new-product-area .icon-gift{
+  width: 20px;
+  padding: 2px;
+}
+.new-product-area .dash{
+  color: #c0c0c0;
+  padding: 24px;
+}
+.new-product-area .new-arrival-text{
+  display: inline;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666
+}
+
+/* 产品部分 */
+.product-title{
+  height: 40px;
+  line-height: 40px;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 10px;
+}
+.product-title text {
+  margin: 0 16px;
+  padding: 0 4px;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+.product-title text.choose{
+  font-weight: 500;
+  width: 70px;
+  color: #ff3747;
+  border-bottom-color: #ff3747;
+}
+/* 卡片容器 */
+.products {
+  padding: 20px;
+}
+.product-left{
+  float: left;
+}
+.product-right{
+  float: right;
+}
+/* 卡片盒宽度 */
+.product{
+  width: 48%;
+  position: relative
+}

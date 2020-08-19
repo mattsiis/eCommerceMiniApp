@@ -1,0 +1,97 @@
+page {
+  background: #f3f3f3
+}
+/* 去除原有button样式 */
+button{
+  border-radius: 0;
+  margin: 0;
+  background-color: #fff;
+}
+button::after{
+  border: none;
+}
+
+.detail{
+  padding: 0 0 60px
+}
+
+/* 商品介绍 */
+.detail .intro{
+  display: block;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+/* 图片详情 */
+.detail-img{
+  background: #fff
+}
+.detail-img image{
+  display: block;
+  width: 100%
+}
+/* 固定底部按钮容器 */
+.btn-area{
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  text-align: center;
+  font-size: 26px;
+  align-items: center;
+}
+
+/* 小图标总容器 */
+.btn-small{
+  display: flex;
+
+}
+/* 小图标容器 */
+.icon-share,
+.icon-contact,
+.icon-star{
+  padding: 12px;
+  width: 51px;
+  height: 60px;
+  background: #fff;
+  border: 0px;
+}
+/* 小图标图片 */
+.icon-share image,
+.icon-contact image,
+.icon-star image{
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin: auto;
+}
+/* 小图标文字 */
+.icon-share text,
+.icon-contact text,
+.icon-star text{
+  display: block;
+  font-size: 10px;
+  color: #999;
+}
+/* 加入购物车和收藏按钮 */
+.add-cart,
+.buy{
+  height: 60px;
+  width: 111px;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-cart{
+  background-color: #ffa837
+}
+.buy{
+  background-color: #ff3747
+}
